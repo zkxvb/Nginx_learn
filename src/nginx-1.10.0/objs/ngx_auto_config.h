@@ -1,4 +1,4 @@
-#define NGX_CONFIGURE " --add-module=/home/zkxvb/nginx_learn/ngx_http_hello_world_module"
+#define NGX_CONFIGURE " --add-module=/home/zkxvb/Nginx_learn/module_source/ngx_http_echo_module"
 
 #ifndef NGX_COMPILER
 #define NGX_COMPILER  "gcc 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) "
