@@ -220,7 +220,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_upstream_least_conn_module.o \
 	objs/src/http/modules/ngx_http_upstream_keepalive_module.o \
 	objs/src/http/modules/ngx_http_upstream_zone_module.o \
-	objs/addon/ngx_http_echo_module/ngx_http_echo_module.o \
+	objs/addon/ngx_http_echo_module/ngx_http_mytest_module.o \
 	objs/ngx_modules.o
 
 	$(LINK) -o objs/nginx \
@@ -337,7 +337,7 @@ objs/nginx:	objs/src/core/nginx.o \
 	objs/src/http/modules/ngx_http_upstream_least_conn_module.o \
 	objs/src/http/modules/ngx_http_upstream_keepalive_module.o \
 	objs/src/http/modules/ngx_http_upstream_zone_module.o \
-	objs/addon/ngx_http_echo_module/ngx_http_echo_module.o \
+	objs/addon/ngx_http_echo_module/ngx_http_mytest_module.o \
 	objs/ngx_modules.o \
 	-ldl -lpthread -lcrypt -lpcre -lcrypto -lcrypto -lz \
 	-Wl,-E
@@ -1144,11 +1144,11 @@ objs/src/http/modules/ngx_http_upstream_zone_module.o:	$(CORE_DEPS) $(HTTP_DEPS)
 		src/http/modules/ngx_http_upstream_zone_module.c
 
 
-objs/addon/ngx_http_echo_module/ngx_http_echo_module.o:	$(ADDON_DEPS) \
-	/home/zkxvb/Nginx_learn/module_source/ngx_http_echo_module/ngx_http_echo_module.c
+objs/addon/ngx_http_echo_module/ngx_http_mytest_module.o:	$(ADDON_DEPS) \
+	/home/zkxvb/Nginx_learn/module_source/ngx_http_echo_module/ngx_http_mytest_module.c
 	$(CC) -c $(CFLAGS)  $(ALL_INCS) \
-		-o objs/addon/ngx_http_echo_module/ngx_http_echo_module.o \
-		/home/zkxvb/Nginx_learn/module_source/ngx_http_echo_module/ngx_http_echo_module.c
+		-o objs/addon/ngx_http_echo_module/ngx_http_mytest_module.o \
+		/home/zkxvb/Nginx_learn/module_source/ngx_http_echo_module/ngx_http_mytest_module.c
 
 
 manpage:	objs/nginx.8
